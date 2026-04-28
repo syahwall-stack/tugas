@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Banner</title>
+    <style>
+        .banner {
+            width: 700px;
+            position: relative;
+            /* wajib, biar logo absolute-nya ngikut banner */
+        }
+
+        .banner img {
+            max-width: 100%;
+        }
+
+        .logo {
+            width: 80px;
+            position: absolute;
+            /* nempel ke banner, bukan ke halaman */
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <img src="https://placehold.co/700x300" alt="Banner Promo">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.ZiSd_JeAuBKYBeZXrg1ygwHaEK?pid=Api&P=0&h=180" alt="Logo"
+            class="logo">
+    </div>
+</body>
+
+</html>
