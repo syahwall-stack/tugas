@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>12 Column
+        Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #f8fafc
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: auto;
+            padding: 30px 20px
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 16px
+        }
+
+        .col-4 {
+            grid-column: span 4
+        }
+
+        .col-6 {
+            grid-column: span 6
+        }
+
+        .col-8 {
+            grid-column: span 8
+        }
+
+        .box {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, .06)
+        }
+
+        @media(max-width:768px) {
+            .row {
+                grid-template-columns: 1fr
+            }
+
+            .col-4,
+            .col-6,
+            .col-8 {
+                grid-column: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Mini 12 Column Grid System</h1>
+        <section class="row">
+            <article class="box col-8">
+                <h2>Konten
+                    Utama</h2>
+                <p>Lebar 8 dari 12 kolom.</p>
+            </article>
+            <aside class="box col-4">
+                <h2>Sidebar</h2>
+                <p>Lebar 4 dari 12 kolom.</p>
+            </aside>
+            <div class="box
+col-6">Kolom 6</div>
+            <div class="box col-6">Kolom 6</div>
+        </section>
+    </main>
+</body>
+
+</html>

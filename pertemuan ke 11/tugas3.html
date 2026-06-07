@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #f1f5f9;
+            color: #0f172a
+        }
+
+        .app {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            grid-template-rows: 72px 1fr 48px;
+            grid-template-areas: "header header" "sidebar main" "footer footer"
+        }
+
+        .header {
+            grid-area: header;
+            background: #1e40af;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #0f172a;
+            color: white;
+            padding: 24px
+        }
+
+        .sidebar a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px
+        }
+
+        .sidebar a:hover {
+            background: #1e293b
+        }
+
+        .main {
+            grid-area: main;
+            padding: 24px
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(autofit, minmax(180px, 1fr));
+            gap: 16px
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 14px 30px rgba(15, 23, 42, .07)
+        }
+
+        .card strong {
+            font-size: 2rem;
+            color: #2563eb
+        }
+
+        .panel {
+            margin-top: 18px;
+            min-height: 240px;
+            background: white;
+            border-radius: 22px;
+            padding: 20px
+        }
+
+        .footer {
+            grid-area: footer;
+            display: grid;
+            place-items: center;
+            color: #64748b
+        }
+
+        @media(max-width:760px) {
+            .app {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr auto;
+                grid-template-areas: "header" "sidebar" "main" "footer"
+            }
+
+            .sidebar {
+                display: flex;
+                gap: 8px;
+                overflow: auto;
+                padding: 12px
+            }
+
+            .sidebar a {
+                white-space: nowrap
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <h2>FactoryOps</h2><span>Admin</span>
+        </header>
+        <aside class="sidebar"><a>Overview</a><a>Produksi</a><a>Inventory</a><a>Quality</a></aside>
+        <main class="main">
+            <h1>Dashboard Produksi</h1>
+            <section class="stats">
+                <div class="card">Output<br><strong>1.248</strong></div>
+                <div class="card">Defect<br><strong>2.1%</strong></div>
+                <div class="card">Downtime<br><strong>34m</strong></div>
+                <div class="card">Shift<br><strong>A</strong></div>
+            </section>
+            <section class="panel">Area grafik /
+                tabel monitoring.</section>
+        </main>
+        <footer class="footer">© 2026 FactoryOps</footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Hero Grid
+        Lines</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #f8fafc;
+            color: #0f172a
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+            align-items: center;
+            max-width: 1180px;
+            margin: auto;
+            padding: 30px 20px
+        }
+
+        .copy {
+            grid-column: 1/7
+        }
+
+        img {
+            grid-column: 8/13;
+            height: 420px;
+            border-radius: 34px;
+            background: radial-gradient(circle at 30% 30%, #fbbf24, #2563eb 60%, #0f172a);
+            box-shadow: 0 30px 80px rgba(37, 99, 235, .25)
+        }
+
+        h1 {
+            font-size: clamp(2.4rem, 6vw, 5rem);
+            line-height: 1;
+            margin: 0
+        }
+
+        p {
+            color: #64748b;
+            font-size: 1.1rem
+        }
+
+        .cta {
+            display: inlineblock;
+            background: #2563eb;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 900
+        }
+
+        @media(max-width:840px) {
+            .hero {
+                grid-template-columns: 1fr
+            }
+
+            .copy,
+            .visual {
+                grid-column: auto
+            }
+
+            .visual {
+                height: 280px;
+                order: -1
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="copy">
+            <h1>Kelola Produksi Lebih Cepat</h1>
+            <p>Dashboard operasi real-time untuk manufaktur
+                modern.</p><a class="cta" href="#">Coba Demo</a>
+        </div>
+        <img src="img/discussion.jpeg" alt="">
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Kanban
+        Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #e0f2fe;
+            color: #0f172a
+        }
+
+        .board-wrap {
+            padding: 28px
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(260px, 1fr));
+            gap: 16px;
+            overflow-x: auto
+        }
+
+        .col {
+            background: #f8fafc;
+            border-radius: 22px;
+            padding: 14px;
+            min-height: 450px;
+            border: 1px solid #bae6fd
+        }
+
+        .col h2 {
+            font-size: 1rem
+        }
+
+        .task {
+            background: white;
+            border-radius: 16px;
+            padding: 14px;
+            margin: 12px 0;
+            box-shadow: 0 10px 24px rgba(14, 165, 233, .12);
+            border-left: 5px solid #0284c7
+        }
+
+        .label {
+            font-size: .75rem;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 4px 8px;
+            border-radius: 999px;
+            font-weight: 800
+        }
+
+        @media(max-width:900px) {
+            .board {
+                grid-template-columns: repeat(4, 260px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="board-wrap">
+        <h1>Project Kanban Board</h1>
+        <section class="board">
+            <div class="col">
+                <h2>Backlog</h2>
+                <div class="task"><span class="label">UI</span>
+                    <p>Desain halaman login</p>
+                </div>
+                <div class="task"><span class="label">API</span>
+                    <p>Endpoint
+                        produk</p>
+                </div>
+            </div>
+            <div class="col">
+                <h2>In Progress</h2>
+                <div class="task"><span class="label">Grid</span>
+                    <p>Dashboard layout</p>
+                </div>
+            </div>
+            <div class="col">
+                <h2>Review</h2>
+                <div class="task"><span class="label">QA</span>
+                    <p>Cross-browser test</p>
+                </div>
+            </div>
+            <div class="col">
+                <h2>Done</h2>
+                <div class="task"><span class="label">Deploy</span>
+                    <p>Landing page v1</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

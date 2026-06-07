@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Portfolio
+        Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #111827;
+            color: white
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 36px 20px
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-auto-rows: 150px;
+            grid-auto-flow: dense;
+            gap: 14px
+        }
+
+        .item {
+            border-radius: 22px;
+            background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+            display: grid;
+            place-items: center;
+            font-size: 2rem;
+            font-weight: 900
+        }
+
+        .wide {
+            grid-column: span 2
+        }
+
+        .tall {
+            grid-row: span 2
+        }
+
+        .big {
+            grid-column: span 2;
+            grid-row: span 2
+        }
+
+        @media(max-width:600px) {
+
+            .wide,
+            .big {
+                grid-column: span 1
+            }
+
+            .tall,
+            .big {
+                grid-row: span 1
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <h1>Portfolio Gallery</h1>
+        <section class="gallery">
+            <div class="item big">ERP</div>
+            <div class="item">UI</div>
+            <div class="item tall">LMS</div>
+            <div class="item wide">E-Commerce</div>
+            <div class="item">API</div>
+            <div class="item">Mobile</div>
+            <div class="item wide">Dashboard</div>
+            <div class="item">IoT</div>
+        </section>
+    </main>
+</body>
+
+</html>

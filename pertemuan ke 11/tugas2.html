@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Pricing Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: linear-gradient(135deg, #eff6ff, #f8fafc);
+            color: #0f172a
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: auto;
+            padding: 56px 20px;
+            text-align: center
+        }
+
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(autofit, minmax(260px, 1fr));
+            gap: 22px;
+            margin-top: 28px
+        }
+
+        .plan {
+            background: white;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+            border-radius: 26px;
+            padding: 26px;
+            box-shadow: 0 20px 50px rgba(30, 64, 175, .08)
+        }
+
+        .plan.featured {
+            background: #1e40af;
+            color: white;
+            transform: translateY(-10px)
+        }
+
+        .plan h2 {
+            margin-top: 0
+        }
+
+        .price {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin: 16px 0
+        }
+
+        .plan ul {
+            padding-left: 20px;
+            line-height: 1.9
+        }
+
+        .plan button {
+            width: 100%;
+            border: 0;
+            border-radius: 14px;
+            padding: 14px;
+            font-weight: 800;
+            background: #f59e0b;
+            color: #111827
+        }
+
+        .featured button {
+            background: white;
+            color: #1e40af
+        }
+
+        @media(max-width:720px) {
+            .plan.featured {
+                transform: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <h1>Paket Layanan Cloud ERP</h1>
+        <p>Pilih paket sesuai skala bisnis.</p>
+        <section class="plans">
+            <article class="plan">
+                <h2>Basic</h2>
+                <div class="price">Rp99K</div>
+                <ul>
+                    <li>1 proyek</li>
+                    <li>Support email</li>
+                    <li>Dashboard
+                        dasar</li>
+                </ul><button>Mulai</button>
+            </article>
+            <article class="plan featured">
+                <h2>Pro</h2>
+                <div class="price">Rp249K</div>
+                <ul>
+                    <li>10
+                        proyek</li>
+                    <li>Support prioritas</li>
+                    <li>Report otomatis</li>
+                </ul><button>Pilih Pro</button>
+            </article>
+            <article class="plan">
+                <h2>Enterprise</h2>
+                <div class="price">Custom</div>
+                <ul>
+                    <li>Unlimited proyek</li>
+                    <li>SLA bisnis</li>
+                    <li>Integrasi API</li>
+                </ul><button>Hubungi
+                    Sales</button>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>News
+        Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: #fff7ed;
+            color: #1c1917
+        }
+
+        .wrap {
+            max-width: 1120px;
+            margin: auto;
+            padding: 36px 20px
+        }
+
+        .news {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px
+        }
+
+        .article {
+            background: white;
+            border: 1px solid #fed7aa;
+            border-radius: 18px;
+            overflow: hidden
+        }
+
+        .article .img {
+            height: 140px;
+            background: linear-gradient(135deg, #fb923c, #facc15)
+        }
+
+        .article div:lastchild {
+            padding: 18px
+        }
+
+        .featured {
+            grid-column: span 2
+        }
+
+        .featured .img {
+            height: 300px
+        }
+
+        .tag {
+            font: 700 12px Arial;
+            color: #ea580c;
+            text-transform: uppercase;
+            margin: 8px;
+        }
+
+        h2 {
+            margin: 8px;
+        }
+
+
+        P {
+            margin: 8px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media(max-width:850px) {
+            .news {
+                grid-template-columns: 1fr
+            }
+
+            .featured {
+                grid-column: auto
+            }
+
+            .featured .img {
+                height: 190px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="wrap">
+        <h1>Indorama Tech News</h1>
+        <section class="news">
+            <article class="article featured">
+                <div class="img"> <img src="img/mahasiswa trpl.jpg" alt="BEARING A12"></div>
+                <div><span class="tag">Headline</span>
+                    <h2>Mahasiswa TRPL Bangun Dashboard Industri</h2>
+                    <p>Implementasi CSS Grid untuk layout
+                        modern.</p>
+                </div>
+            </article>
+            <article class="article">
+                <div class="img"><img src="img/mahasiswa trpl.jpg" alt="BEARING A12"></div>
+                <div><span class="tag">Web</span>
+                    <h2>Grid vs
+                        Flexbox</h2>
+                </div>
+            </article>
+            <article class="article">
+                <div class="img"> <img src="img/mahasiswa trpl.jpg" alt="BEARING A12"></div>
+                <div><span class="tag">Karier</span>
+                    <h2>Skill Front-End
+                        2026</h2>
+                </div>
+            </article>
+            <article class="article">
+                <div class="img"> <img src="img/mahasiswa trpl.jpg" alt="BEARING A12"></div>
+                <div><span class="tag">UI</span>
+                    <h2>Desain Card
+                        Modern</h2>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

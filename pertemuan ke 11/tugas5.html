@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>KPI Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        .dashboard {
+            max-width: 1160px;
+            margin: auto;
+            padding: 34px 20px;
+        }
+
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 16px;
+        }
+
+        .kpi {
+            background: linear-gradient(180deg,
+                    #1e293b,
+                    #111827);
+            border: 1px solid #334155;
+            border-radius: 22px;
+            padding: 20px;
+        }
+
+        .kpi span {
+            color: #94a3b8;
+        }
+
+        .kpi strong {
+            display: block;
+            font-size: 2rem;
+            margin-top: 8px;
+        }
+
+        .trend {
+            color: #22c55e;
+            font-weight: 800;
+        }
+
+        .content {
+            margin-top: 18px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 16px;
+        }
+
+        .panel {
+            background: #111827;
+            border: 1px solid #334155;
+            border-radius: 22px;
+            padding: 22px;
+            min-height: 260px;
+        }
+
+        .bars {
+            height: 190px;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            align-items: end;
+            gap: 12px;
+        }
+
+        .bars div {
+            background: #38bdf8;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .bars div:nth-child(1) {
+            height: 45%;
+        }
+
+        .bars div:nth-child(2) {
+            height: 80%;
+        }
+
+        .bars div:nth-child(3) {
+            height: 65%;
+        }
+
+        .bars div:nth-child(4) {
+            height: 92%;
+        }
+
+        .bars div:nth-child(5) {
+            height: 70%;
+        }
+
+        .bars div:nth-child(6) {
+            height: 56%;
+        }
+
+        .bars div:nth-child(7) {
+            height: 88%;
+        }
+
+        @media (max-width: 840px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="dashboard">
+        <h1>Executive KPI Dashboard</h1>
+        <section class="kpis">
+            <div class="kpi">
+                <span>Produksi</span><strong>24.800</strong>
+                <p class="trend">+12%</p>
+            </div>
+            <div class="kpi">
+                <span>Revenue</span><strong>1.2M</strong>
+                <p class="trend">+8%</p>
+            </div>
+            <div class="kpi">
+                <span>Order</span><strong>846</strong>
+                <p class="trend">+5%</p>
+            </div>
+            <div class="kpi">
+                <span>Defect</span><strong>1.8%</strong>
+                <p class="trend">-0.4%</p>
+            </div>
+        </section>
+        <section class="content">
+            <div class="panel">
+                <h2>Output Mingguan</h2>
+                <div class="bars">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="panel">
+                <h2>Catatan</h2>
+                <p>Line 3 butuh preventive maintenance.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

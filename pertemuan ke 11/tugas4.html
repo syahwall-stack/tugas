@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Listing
+        Produk</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #f8fafc;
+            color: #0f172a
+        }
+
+        .page {
+            max-width: 1180px;
+            margin: auto;
+            padding: 32px 20px
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 22px
+        }
+
+        .filter,
+        .product {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, .06)
+        }
+
+        .filter label {
+            display: block;
+            margin: 14px 0
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 16px;
+            overflow: hidden;
+        }
+
+        img {
+            height: 120px;
+            border-radius: 14px;
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            object-fit: cover;
+            background: lineargradient(135deg, #bfdbfe, #99f6e4)
+        }
+
+        .product h3 {
+            margin: 12px 0 4px;
+        }
+
+        .product b {
+            color: #1d4ed8
+        }
+
+        @media(max-width:800px) {
+            .layout {
+                grid-template-columns: 1fr
+            }
+
+            .filter {
+                position: static
+            }
+
+            .products {
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <h1>Marketplace Sparepart</h1>
+        <div class="layout">
+            <aside class="filter">
+                <h2>Filter</h2><label><input type="checkbox"> Elektronik</label><label><input type="checkbox">
+                    Tools</label><label><input type="checkbox"> Safety</label><label>Harga maksimum
+                    <input type="range"></label>
+            </aside>
+            <section class="products">
+                <article class="product">
+                    <img src="img/BEARING A12.jpeg" alt="">
+                    <h3>Bearing
+                        A12</h3><b>Rp80.000</b>
+                </article>
+                <article class="product">
+                    <img src="img/SENSOR PNP.jpeg" alt="">
+                    <h3>Sensor PNP</h3><b>Rp220.000</b>
+                </article>
+                <article class="product">
+                    <img src="img/SAFETY GLOVE.jpeg" alt="">
+                    <h3>Safety Gloves</h3><b>Rp45.000</b>
+                </article>
+                <article class="product">
+                    <img src="img/RELAY 24V.jpeg" alt="">
+                    <h3>Relay
+                        24V</h3><b>Rp62.000</b>
+                </article>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

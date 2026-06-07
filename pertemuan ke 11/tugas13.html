@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Container
+        Query Card</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #ecfeff;
+            color: #0f172a
+        }
+
+        .page {
+            max-width: 1050px;
+            margin: auto;
+            padding: 38px 20px
+        }
+
+        .widgetarea {
+            container-type: inline-size;
+            background: white;
+            border-radius: 28px;
+            padding: 20px;
+            border: 1px solid #bae6fd
+        }
+
+        .profilecard {
+            display: grid;
+            gap: 16px;
+            background: #f8fafc;
+            border-radius: 22px;
+            padding: 18px
+        }
+
+        .avatar {
+            height: 180px;
+            border-radius: 18px;
+            background: lineargradient(135deg, #06b6d4, #1d4ed8)
+        }
+
+        .info h2 {
+            margin-top: 0
+        }
+
+        .skills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap
+        }
+
+        .skills span {
+            background: #dbeafe;
+            color: #1e40af;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-weight: 800;
+            font-size: .8rem
+        }
+
+        @container (min-width:620px) {
+            .profile-card {
+                grid-template-columns: 260px 1fr;
+                align-items: center
+            }
+
+            .avatar {
+                height: 260px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <h1>Component Responsive dengan Container Query</h1>
+        <section class="widget-area">
+            <article class="profilecard">
+                <div class="avatar"></div>
+                <div class="info">
+                    <h2>Front-End Engineer</h2>
+                    <p>Komponen ini berubah berdasarkan lebar container, cocok untuk
+                        design system.</p>
+                    <div class="skills"><span>CSS Grid</span><span>UI</span><span>Responsive</span></div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
